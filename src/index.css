@@ -1,0 +1,28 @@
+*{
+  font-family: Cera pro;
+}
+body{
+  margin: 0 6%;
+  font-family: Cera pro;
+  box-sizing: border-box;
+}
+.logo{
+  width: 30px;
+  height: 30px;
+  margin-left: 2%;
+}
+.active{
+  color: #46A358;
+}
+.gul{
+  width: 450px;
+  height: 450px;
+  margin-left: 110px;
+}
+.gul1{
+  width: 135px;
+  height: 135px;
+  position: absolute;
+  top: 285px;
+  left: 140px;
+}
