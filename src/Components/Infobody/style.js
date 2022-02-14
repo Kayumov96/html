@@ -35,5 +35,9 @@ export const Leftinfo =styled.div`
   font-weight: 300;
 `;
 export const Jpg = styled.img`
-
+width: 400px;
+height: 400px;
+background-color: #fbfbfb;
+border-radius: inherit;
+outline: none;
 `;

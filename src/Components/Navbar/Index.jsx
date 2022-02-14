@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { menunav } from '../../utils/mock';
-import { Divcontainer, Span, Menu, Text, Img, Btn, Icons} from './style';
+import { Divcontainer, Span, Menu, Text, Imeg, Btn, Icons} from './style';
 import logo from '../../Assets/Imgs/logo.png';
 import search from '../../Assets/Icons/search.svg';
 import basket from '../../Assets/Icons/basket.svg';
@@ -29,9 +29,9 @@ export default class Index extends Component {
                 } 
                    </Menu>
                    <Icons>
-                    <Img src={search} alt='search'/>  
-                    <Img src={basket} alt='Basket'/>
-                    <Btn><Img src={Logout} alt='Login'/> Login</Btn>
+                    <Imeg src={search} alt='search'/>  
+                    <Imeg src={basket} alt='Basket'/>
+                    <Btn><Imeg src={Logout} alt='Login'/> Login</Btn>
                     </Icons>
                 </Divcontainer>
             </div>

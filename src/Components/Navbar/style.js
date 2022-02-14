@@ -34,7 +34,7 @@ justify-content: center;
 width: 23%;
 height: inherit;
 `;
-export const Img = styled.img`
+export  const Imeg = styled.img`
 width: 35%;
 height: 35%;
 cursor: pointer;
