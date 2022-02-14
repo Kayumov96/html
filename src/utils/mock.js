@@ -1,3 +1,10 @@
+import product1 from '../Assets/Imgs/product1.png';
+import product8 from '../Assets/Imgs/product8.png';
+import product6 from '../Assets/Imgs/product6.png';
+import product7 from '../Assets/Imgs/product7.png';
+
+
+
 export const menunav =[
     {id:1, title:'Home', path: '/home', hidden: false},
     {id:2, title:'Shop', path: '/shop', hidden: false},
@@ -25,5 +32,12 @@ export const prices = [
 export const types =[
     {id:1, title: 'All Plants', path:'/allplants'},
     {id:2, title: 'New Arrivals', path:'/newarrivals',},
-    {id:3, title: 'Sale', path: '/sale'}
+    {id:3, title: 'Sale', path: '/sale'},
+]
+
+export const shopcards = [
+    {id:1, src: product1, title: 'Broadleaf Lady Palm', price:59.00},
+    {id:2, src: product6, title:'Aluminum Plant', price: 179.00},
+    {id: 3, src: product7,title: "Bird's Nest Fern", price: 99.00},
+    {id: 4, src: product8,title: 'Barberton Daisy', price: 119.00},
 ]

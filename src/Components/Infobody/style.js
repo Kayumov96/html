@@ -34,3 +34,6 @@ export const Leftinfo =styled.div`
   font-size: 12px;
   font-weight: 300;
 `;
+export const Jpg = styled.img`
+
+`;

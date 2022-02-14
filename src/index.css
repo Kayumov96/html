@@ -2,7 +2,7 @@
   font-family: Cera pro;
 }
 body{
-  margin: 0 6%;
+  margin: 0 120px;
   font-family: Cera pro;
   box-sizing: border-box;
 }
@@ -25,4 +25,8 @@ body{
   position: absolute;
   top: 285px;
   left: 140px;
+}
+.page2{
+  width: 100%;
+  margin: auto;
 }
