@@ -36,8 +36,8 @@ export const types =[
 ]
 
 export const shopcards = [
-    {id:1, src: product1, title: 'Broadleaf Lady Palm', price:59.00, description:'The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. '},
-    {id:2, src: product6, title:'Aluminum Plant', price: 179.00, description: 'Culpa enim veniam tempore, accusantium ratione quaerat quos esse pariatur. Recusandae reprehenderit ipsam repellendus. Quaerat earum omnis nostrum. Voluptatum quod in neque et vel repellat voluptas. '},
-    {id: 3, src: product7,title: "Bird's Nest Fern", price: 99.00, description:' Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic architecto deleniti odio laborum quos placeat alias magnam omnis, dolore atque?'},
-    {id: 4, src: product8,title: 'Barberton Daisy', price: 119.00, description:'The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. '},
+    {id:1, src: product1, size:[{id:1, size: 'S'},{id:2, size: 'M'}, {id:3, size: 'L'}, {id:4, size:'XL'}], title: 'Broadleaf Lady Palm', price:59.00, description:'The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. '},
+    {id:2, src: product6, size:[{id:1, size: 'S'},{id:2,size: 'M'}, {id:3, size: 'L'}, {id:4, size:'XL'}], title:'Aluminum Plant', price: 179.00, description: 'Culpa enim veniam tempore, accusantium ratione quaerat quos esse pariatur. Recusandae reprehenderit ipsam repellendus. Quaerat earum omnis nostrum. Voluptatum quod in neque et vel repellat voluptas. '},
+    {id: 3, src: product7, size:[{id:1,size: 'S'},{id:2, size: 'M'}, {id:3, size: 'L'}, {id:4, size:'XL'}], title: "Bird's Nest Fern", price: 99.00, description:' Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic architecto deleniti odio laborum quos placeat alias magnam omnis, dolore atque?'},
+    {id: 4, src: product8, size:[{id:1, size: 'S'},{id:2, size: 'M'}, {id:3, size: 'L'}, {id:4, size:'XL'}], title: 'Barberton Daisy', price: 119.00, description:'The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. '},
 ]

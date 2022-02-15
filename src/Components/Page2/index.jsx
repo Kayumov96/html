@@ -5,7 +5,7 @@ import Navbar from '../Navbar/Index';
 import { Jpg } from '../Infobody/style';
 import { Leftside, Minidiv, Rightside, Bigdiv, Img, Infolist, Leftmini, Pt, Ht, Imgicon, Describe} from './style';
 import { shopcards } from '../../utils/mock';
-import { Imeg } from '../Navbar/style';
+import { Circle } from '../Generic/style';
 import search from '../../Assets/Icons/search.svg';
 import Star from '../../Assets/Icons/Star.svg';
 import Staryellow from '../../Assets/Icons/Staryellow.svg';
@@ -18,6 +18,7 @@ export default class SecondPage extends Component {
         this.state ={
             data: shopcards,
             selected: {},
+            active: ''
         }
     };
       
@@ -50,14 +51,22 @@ export default class SecondPage extends Component {
                        </Leftside>
                        <Rightside>
                            <Infolist>
-                            <Ht>{this.state.selected.title}</Ht>
-                            <Pt>${this.state.selected.price}</Pt>
+                                <Ht>{this.state.selected.title}</Ht>
+                                <Pt>${this.state.selected.price}</Pt>
                            </Infolist>
-                           <Ht>Short Description:</Ht>
+                             <Ht>Short Description:</Ht>
                            <Describe>
                                <h5>{this.state.selected.description}</h5>
                            </Describe>
-                           <Ht>Size:</Ht>
+                            <Ht>Size:</Ht>
+                               <Circle>S</Circle>
+                               <Circle>M</Circle>
+                               <Circle>L</Circle>
+                               <Circle>XL</Circle>                          
+                             <Describe>
+                                 <Circle fill={'46A358'}>-</Circle> 
+                                 1<Circle>+</Circle>
+                             </Describe>
                        </Rightside>
                     </HeadContainer>
             </div>
