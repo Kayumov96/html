@@ -27,5 +27,8 @@ export const Addremove = styled.button`
  border: none;
  background: linear-gradient(180deg, #46A358 0%, rgba(70, 163, 88, 0.8) 100%);
  border-radius: 40%; 
-
+`;
+export const Range =styled.input`
+ width: 264px;
+ type: range;
 `;

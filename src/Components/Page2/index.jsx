@@ -33,7 +33,7 @@ export default class SecondPage extends Component {
     render() {
         const { value } = this.props; 
         const getSelect = (selected) =>(
-           this.setState({selected})
+           this.setState({selected, count:0})
         ) 
         // const getSize = (selectsize)=>(
         //     this.setState({active: selectsize})
