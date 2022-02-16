@@ -41,7 +41,7 @@ export default class SecondPage extends Component {
         return (
             <div >
                   <Navbar/>
-                        <HeadCategory>
+                        <HeadCategory >
                            Home/Shop
                         </HeadCategory>
                     <HeadContainer>
@@ -81,7 +81,7 @@ export default class SecondPage extends Component {
                                  <Addremove onClick={()=>{this.setState({count: this.state.count -1})}}>--</Addremove>
                                 {this.state.count}
                                  <Addremove onClick={()=>{this.setState({count:this.state.count +1})}}>+</Addremove>
-                                 <BBtn style={{width:'130px',}}>BUY NOW</BBtn>
+                                 <BBtn style={{width:'130px'}}>BUY NOW</BBtn>
                                  <BBtn style={{background: 'white', color:'#46A358', border:'1px solid #46A358'}}>ADD TO CARD</BBtn>
                                  <BBtn style={{background:'white', width:'40px', border:'1px solid #46A358'}}><Imeg src={heart} alt='like' style={{width:'100%'}}></Imeg></BBtn>
                              </BtnDiv>
@@ -99,12 +99,25 @@ export default class SecondPage extends Component {
                             
                        </Rightside>
                     </HeadContainer>
-                    <HeadContainer style={{marginTop:'110px',height:'500px'}}>
-                        <Ht onClick={()=>this.setState({active: value})} className={`Links
-                        ${this.state.active===value && 'active'}`}>Product Description</Ht>
-                        <Ht onClick={()=>this.setState({active: value})} className={`Links
-                        ${this.state.active===value && 'active'}`}>Reviews</Ht>
+                    <HeadContainer style={{marginTop:'110px',textAlign:'start', height:'500px', display:'block'}}>
+                        <BtnDiv style={{height:'46px', borderBottom: '0.3px solid rgba(70, 163, 88, 0.5)'}}>
+                            <HeadCategory onClick={()=>this.setState({active: value})} className={`Links
+                        ${this.state.active===value && 'active'}`}>Product Description</HeadCategory>
+                            <HeadCategory onClick={()=>this.setState({active: value})} className={`Links
+                        ${this.state.active===value && 'active'}`}>Reviews</HeadCategory>
+                        </BtnDiv>
+                        <HeadContainer style={{height:'190px',width:'1180px', lineHeight:'24px', padding:'8px 8px', color:'#acacac'}}>{this.state.selected.productDescription}</HeadContainer>
+                            <HeadCategory style={{marginLeft:'2%', fontSize:'14px'}}>Living Room:</HeadCategory>
+                        <HeadContainer style={{height:'50px',width:'1180px', lineHeight:'24px',padding:'8px 8px', color:'#acacac'}}>{this.state.selected.livingroom}</HeadContainer>
+                            <HeadCategory style={{marginLeft:'2%', fontSize:'14px'}}>Dinning Room:</HeadCategory>
+                        <HeadContainer style={{height:'50px',width:'1180px', lineHeight:'24px',padding:'8px 8px', color:'#acacac'}}>{this.state.selected.dinningroom}</HeadContainer>
+                            <HeadCategory style={{marginLeft:'2%', fontSize:'14px'}}>Office:</HeadCategory>
+                        <HeadContainer style={{height:'50px',width:'1180px', lineHeight:'24px',padding:'8px 8px', color:'#acacac'}}>{this.state.selected.office}</HeadContainer>
                     </HeadContainer>
+                    <BtnDiv style={{height:'46px',marginTop:'127px', borderBottom: '0.3px solid rgba(70, 163, 88, 0.5)'}}>
+                        <Ht onClick={()=>this.setState({active: value})} className={`Links
+                        ${this.state.active===value && 'active'}`}>Releted Products</Ht>
+                    </BtnDiv>
             </div>
         );
     }
