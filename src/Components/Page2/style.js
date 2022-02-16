@@ -10,7 +10,6 @@ export const Leftside = styled.div`
 export const Rightside = styled.div`
  width: 574px;
  height: 450px;
- border: 1px solid black;
  padding: 0;
  margin: 0;
 `;
@@ -77,5 +76,22 @@ export const Imgicon = styled.img`
 export const Describe = styled.div`
  height: 66px;
  width: 90%;
+display: flex;
+align-items: center;
  margin: auto 4%;
+`;
+export const BtnDiv = styled.div`
+ height: 66px;
+ width: 100%;
+ display: flex;
+ align-items: center;
+ 
+`;
+export const Hinfo = styled.h4`
+ color: #A5A5A5;
+ font-size: 15px;
+ padding: 0;
+ margin: 0 4%;
+ margin-bottom: 14%;
+ font-weight: normal;
 `;

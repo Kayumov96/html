@@ -1,14 +1,21 @@
 import React, { Component } from 'react';
-import { HeadContainer } from '../Header/style';
-import { HeadCategory } from '../Infobody/style';
+import { BBtn, HeadContainer } from '../Header/style';
+import { HeadCategory, Plants } from '../Infobody/style';
 import Navbar from '../Navbar/Index';
 import { Jpg } from '../Infobody/style';
-import { Leftside, Minidiv, Rightside, Bigdiv, Img, Infolist, Leftmini, Pt, Ht, Imgicon, Describe} from './style';
+import { Leftside, Minidiv, Rightside, Bigdiv, Img, Infolist, Leftmini, Pt, Ht, Imgicon, Describe, BtnDiv, Hinfo} from './style';
 import { shopcards } from '../../utils/mock';
-import { Circle } from '../Generic/style';
+import { Addremove, Circle } from '../Generic/style';
 import search from '../../Assets/Icons/search.svg';
+import heart from '../../Assets/Icons/heart.svg'
 import Star from '../../Assets/Icons/Star.svg';
 import Staryellow from '../../Assets/Icons/Staryellow.svg';
+import { Imeg } from '../Navbar/style';
+import Facebook from '../../Assets/Icons/Facebook.svg';
+import Twitter from '../../Assets/Icons/Twitter.svg';
+import Linkedin from '../../Assets/Icons/Linkedin.svg';
+import Email from '../../Assets/Icons/Email.svg'
+
 
 
 
@@ -18,14 +25,19 @@ export default class SecondPage extends Component {
         this.state ={
             data: shopcards,
             selected: {},
-            active: ''
+            count: 0,
+            active: '',
         }
     };
       
     render() {
+        const { value } = this.props; 
         const getSelect = (selected) =>(
            this.setState({selected})
-        )
+        ) 
+        // const getSize = (selectsize)=>(
+        //     this.setState({active: selectsize})
+        // )
         return (
             <div >
                   <Navbar/>
@@ -59,15 +71,39 @@ export default class SecondPage extends Component {
                                <h5>{this.state.selected.description}</h5>
                            </Describe>
                             <Ht>Size:</Ht>
-                               <Circle>S</Circle>
-                               <Circle>M</Circle>
-                               <Circle>L</Circle>
-                               <Circle>XL</Circle>                          
-                             <Describe>
-                                 <Circle fill={'46A358'}>-</Circle> 
-                                 1<Circle>+</Circle>
-                             </Describe>
+                                    <Describe>
+                                        <Circle>S</Circle>
+                                        <Circle>M</Circle>
+                                        <Circle>L</Circle>
+                                        <Circle>XL</Circle>
+                                    </Describe>
+                             <BtnDiv>
+                                 <Addremove onClick={()=>{this.setState({count: this.state.count -1})}}>--</Addremove>
+                                {this.state.count}
+                                 <Addremove onClick={()=>{this.setState({count:this.state.count +1})}}>+</Addremove>
+                                 <BBtn style={{width:'130px',}}>BUY NOW</BBtn>
+                                 <BBtn style={{background: 'white', color:'#46A358', border:'1px solid #46A358'}}>ADD TO CARD</BBtn>
+                                 <BBtn style={{background:'white', width:'40px', border:'1px solid #46A358'}}><Imeg src={heart} alt='like' style={{width:'100%'}}></Imeg></BBtn>
+                             </BtnDiv>
+                            <div style={{height:'130px'}}>
+                               <div style={{height:'15px',width:'80%', marginLeft:'4%',marginBottom:'2%',}}>SKU: 1995751877966 </div>
+                               <div style={{width:'80%', marginBottom:'2%', marginLeft:'4%'}}>Categories: {this.state.selected.categories}</div>
+                               <div style={{width:'80%', marginBottom:'2%', marginLeft:'4%'}}>Tags: {this.state.selected.tags}</div>
+                               <div style={{width:'80%', marginBottom:'2%', marginLeft:'4%', display:'flex'}}>
+                                   Share this products: <a href='https://www.facebook.com'> <Imgicon style={{marginLeft:'24%'}} src={Facebook} alt='facebook'/></a>
+                                                    <a href='https://www.twitter.com'> <Imgicon src={Twitter} alt='twitter'/></a>
+                                                    <a href='https://linkedin.com'><Imgicon src={Linkedin} alt='linkedin'/></a>
+                                                    <a href='https://www.gmail.com'><Imgicon src={Email} alt='email'/></a>
+                               </div>
+                            </div>
+                            
                        </Rightside>
+                    </HeadContainer>
+                    <HeadContainer style={{marginTop:'110px',height:'500px'}}>
+                        <Ht onClick={()=>this.setState({active: value})} className={`Links
+                        ${this.state.active===value && 'active'}`}>Product Description</Ht>
+                        <Ht onClick={()=>this.setState({active: value})} className={`Links
+                        ${this.state.active===value && 'active'}`}>Reviews</Ht>
                     </HeadContainer>
             </div>
         );
