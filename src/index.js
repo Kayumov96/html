@@ -8,10 +8,10 @@ import Page2 from './Components/Page2/index.jsx'
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* <Navbar />
+    <Navbar />
     <Header/>
-    <Infobody/> */}
-    <Page2/>
+    <Infobody/>
+    {/* <Page2/> */}
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -24,7 +24,7 @@ export const categories = [
     {id:9, title:'Accessories', amount: 18},
 ];
 
-export const prices = [
+export const sizes = [
     {id:1, size: 'Small', amount: 119},
     {id:2, size: 'Medium', amount: 86},
     {id:3, size: 'Large', amount: 78}

@@ -8,8 +8,7 @@ export const InfoContainer = styled.div`
 `;
 export const Categories =styled.div`
 width: 310px;
-margin-right: 900px ;
-height: 774px;
+padding: 2% 0;
 background-color: #FBFBFB;
 `;
 export const Plants = styled.div`
@@ -29,8 +28,10 @@ font-weight: bold;
 font-size: 18px;
 `;
 export const Leftinfo =styled.div`
-  height: 360px;
-  line-height: 40px;
+  height: 774px;
+  width: 310px;
+  background-color: blanchedalmond;
+  line-height: 14px;
   font-size: 12px;
   font-weight: 300;
 `;
