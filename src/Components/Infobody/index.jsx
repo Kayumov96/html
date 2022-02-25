@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { categories, sizes } from '../../utils/mock';
 import { BBtn } from '../Header/style';
 import { Ptag } from '../Navbar/style';
+import background from '../../Assets/Imgs/background.png';
 import { Categories, HeadCategory, InfoContainer, Leftinfo, Plants } from './style';
 
 export default class Infobody extends Component {
@@ -50,6 +51,9 @@ export default class Infobody extends Component {
                                   </Plants>
                               ))
                            }
+                           <Plants style={{height:'470px', backgroundImage: background}}>
+                              hnf
+                           </Plants>
                       
                     </Leftinfo>
                 </InfoContainer>

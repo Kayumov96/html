@@ -41,6 +41,7 @@ export const Img = styled.img`
  width: 100px;
  height: 100px;
  border-radius: inherit;
+ mix-blend-mode: multiply;
  cursor: pointer;
 :hover{
     width: 99px;

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+
 export const InfoContainer = styled.div`
  display: flex;
  background-color: aqua;
@@ -41,4 +42,5 @@ height: 400px;
 background-color: #fbfbfb;
 border-radius: inherit;
 outline: none;
+mix-blend-mode: multiply;
 `;

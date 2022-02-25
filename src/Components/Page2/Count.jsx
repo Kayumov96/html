@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Leftside, Minidiv, Rightside, Bigdiv, Img, Infolist, Leftmini, Pt, Ht, Imgicon, Describe, BtnDiv} from '../Generic/style';
+import { BtnDiv} from '../Generic/style';
 import { shopcards } from '../../utils/mock';
 import Page from './index';
 

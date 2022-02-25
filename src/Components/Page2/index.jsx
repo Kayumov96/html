@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { BBtn, HeadContainer } from '../Header/style';
-import { HeadCategory, Plants } from '../Infobody/style';
+import { HeadCategory } from '../Infobody/style';
 import Navbar from '../Navbar/Index';
 import { Jpg } from '../Infobody/style';
-import { Leftside, Minidiv, Rightside, Bigdiv, Img, Infolist, Leftmini, Pt, Ht, Imgicon, Describe, BtnDiv, Hinfo} from './style';
+import { Leftside, Minidiv, Rightside, Bigdiv, Img, Infolist, Leftmini, Pt, Ht, Imgicon, Describe, BtnDiv, } from './style';
 import { shopcards } from '../../utils/mock';
 import { Addremove, Circle } from '../Generic/style';
 import search from '../../Assets/Icons/search.svg';
@@ -25,7 +25,7 @@ export default class SecondPage extends Component {
         this.state ={
             data: shopcards,
             selected: {},
-            count: 0,
+            count: Number(localStorage.getItem('count'))||0,
             active: '',
         }
     };
@@ -33,7 +33,7 @@ export default class SecondPage extends Component {
     render() {
         const { value } = this.props; 
         const getSelect = (selected) =>(
-           this.setState({selected, count:0})
+           this.setState({selected})
         ) 
         // const getSize = (selectsize)=>(
         //     this.setState({active: selectsize})
@@ -78,9 +78,9 @@ export default class SecondPage extends Component {
                                         <Circle>XL</Circle>
                                     </Describe>
                              <BtnDiv>
-                                 <Addremove onClick={()=>{this.setState({count: this.state.count -1})}}>--</Addremove>
+                            <Addremove onClick={ () => { localStorage.setItem( 'count', this.state.count -1 === this.state.selected.id ) ; this.setState({count:this.state.count -1}) } }>--</Addremove>
                                 {this.state.count}
-                                 <Addremove onClick={()=>{this.setState({count:this.state.count +1})}}>+</Addremove>
+                            <Addremove onClick={ () => { localStorage.setItem( 'count', this.state.count + 1 ); this.setState({count:this.state.count +1})}}>+</Addremove>
                                  <BBtn style={{width:'130px'}}>BUY NOW</BBtn>
                                  <BBtn style={{background: 'white', color:'#46A358', border:'1px solid #46A358'}}>ADD TO CARD</BBtn>
                                  <BBtn style={{background:'white', width:'40px', border:'1px solid #46A358'}}><Imeg src={heart} alt='like' style={{width:'100%'}}></Imeg></BBtn>
